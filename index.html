@@ -2,293 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Job Application Tracker</title>
+  <link rel="stylesheet" href="./index.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body  class="bg-gray-200 text-gray-200">
-     <!-- ===== Header ===== -->
-  <header class="max-w-6xl mx-auto px-4 py-6 md:flex-row md:justify-between md:items-center">
-    <h1 class="text-2xl font-semibold text-blue-900">
-      Job Application Tracker
-    </h1>
-  </header>
+<body>
 
-  <!-- ===== Dashboard ===== -->
-  <section class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-    
-    <div class="bg-white p-5 rounded-lg shadow-sm">
-      <p class="text-sm text-gray-500">Total</p>
-      <h2 class="text-2xl font-semibold text-blue-900">8</h2>
+<header>
+  <h1>Job Application Tracker</h1>
+</header>
+
+<section class="dashboard">
+  <div><p>Total</p><h2 id="totalCount">8</h2></div>
+  <div><p>Interview</p><h2 id="interviewCount">0</h2></div>
+  <div><p>Rejected</p><h2 id="rejectedCount">0</h2></div>
+</section>
+
+<section class="jobs">
+
+  <div class="jobs-header">
+    <h2>Available Jobs</h2>
+    <span id="jobNumber">8 jobs</span>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="all">All</button>
+    <button class="tab" data-tab="interview">Interview</button>
+    <button class="tab" data-tab="rejected">Rejected</button>
+  </div>
+
+  <!-- ===== JOB CARDS ===== -->
+
+  <div class="job-card" data-status="all">
+    <div class="top">
+      <div>
+        <h3>Mobile First Corp</h3>
+        <p>React Native Developer</p>
+      </div>
+      <button class="delete">✕</button>
     </div>
-
-    <div class="bg-white p-5 rounded-lg shadow-sm">
-      <p class="text-sm text-gray-500">Interview</p>
-      <h2 class="text-2xl font-semibold text-green-600">0</h2>
+    <p class="meta">Remote • Full-time • $130k–175k</p>
+    <span class="badge">NOT APPLIED</span>
+    <p class="desc">Build scalable mobile applications.</p>
+    <div class="actions">
+      <button class="interview">INTERVIEW</button>
+      <button class="rejected">REJECTED</button>
     </div>
+  </div>
 
-    <div class="bg-white p-5 rounded-lg shadow-sm">
-      <p class="text-sm text-gray-500">Rejected</p>
-      <h2 class="text-2xl font-semibold text-red-500">0</h2>
+  <div class="job-card" data-status="all">
+    <div class="top">
+      <div>
+        <h3>WebFlow Agency</h3>
+        <p>Frontend Developer</p>
+      </div>
+      <button class="delete">✕</button>
     </div>
-
-  </section>
-    <div class="max-w-6xl mx-auto px-4 my-8 border-t"></div>
-
-  <!-- ===== Available Jobs ===== -->
-    <section class="max-w-6xl mx-auto px-4">
-
-    <!-- Title -->
-    <div class="flex justify-between items-center mb-4">
-      <h2 class="text-lg font-semibold text-blue-900">Available Jobs</h2>
-      <span class="text-sm text-gray-500">8 jobs</span>
+    <p class="meta">USA • Part-time • $90k</p>
+    <span class="badge">NOT APPLIED</span>
+    <p class="desc">Develop modern UI using HTML & CSS.</p>
+    <div class="actions">
+      <button class="interview">INTERVIEW</button>
+      <button class="rejected">REJECTED</button>
     </div>
+  </div>
 
-    <!-- Tabs -->
-    <div class="flex gap-2 mb-6">
-      <button class="px-4 py-2 rounded-md text-sm bg-blue-600 text-white">
-        All
-      </button>
-      <button class="px-4 py-2 rounded-md text-sm border text-gray-600">
-        Interview
-      </button>
-      <button class="px-4 py-2 rounded-md text-sm border text-gray-600">
-        Rejected
-      </button>
+  <div class="job-card" data-status="all">
+    <div class="top">
+      <div>
+        <h3>TechNova</h3>
+        <p>Junior Web Developer</p>
+      </div>
+      <button class="delete">✕</button>
     </div>
-     <!-- ===== JOB CARD 1 ===== -->
-<div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
-  <div class="flex justify-between items-start">
-    <div>
-      <h3 class="text-lg font-semibold text-blue-900">Mobile First Corp</h3>
-      <p class="text-sm text-gray-600">React Native Developer</p>
+    <p class="meta">Dhaka • Full-time • 60k BDT</p>
+    <span class="badge">NOT APPLIED</span>
+    <p class="desc">Work with JS and responsive layouts.</p>
+    <div class="actions">
+      <button class="interview">INTERVIEW</button>
+      <button class="rejected">REJECTED</button>
     </div>
-    <button class="text-gray-400 hover:text-red-500">🗑</button>
   </div>
 
-  <p class="text-sm text-gray-500 mt-3">
-    Remote • Full-time • $130,000 – $175,000
-  </p>
-
-  <span class="inline-block mt-3 px-3 py-1 text-xs rounded-md bg-blue-50 text-blue-700">
-    NOT APPLIED
-  </span>
-
-  <p class="text-sm text-gray-600 mt-4">
-    Build scalable mobile applications using React Native and modern tooling.
-  </p>
-
-  <div class="flex gap-3 mt-5">
-    <button class="px-4 py-2 border border-green-500 text-green-600 rounded-md text-sm">
-      INTERVIEW
-    </button>
-    <button class="px-4 py-2 border border-red-500 text-red-600 rounded-md text-sm">
-      REJECTED
-    </button>
-  </div>
-</div>
-    
-<!-- ===== JOB CARD 2 ===== -->
-<div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
-  <div class="flex justify-between items-start">
-    <div>
-      <h3 class="text-lg font-semibold text-blue-900">WebFlow Agency</h3>
-      <p class="text-sm text-gray-600">Web Designer & Developer</p>
+  <div class="job-card" data-status="all">
+    <div class="top">
+      <div>
+        <h3>CloudStack</h3>
+        <p>Backend Developer</p>
+      </div>
+      <button class="delete">✕</button>
     </div>
-    <button class="text-gray-400 hover:text-red-500">🗑</button>
-  </div>
-
-  <p class="text-sm text-gray-500 mt-3">
-    Los Angeles, CA • Part-time • $80,000 – $120,000
-  </p>
-
-  <span class="inline-block mt-3 px-3 py-1 text-xs rounded-md bg-blue-50 text-blue-700">
-    NOT APPLIED
-  </span>
-
-  <p class="text-sm text-gray-600 mt-4">
-    Design and develop modern websites for international clients.
-  </p>
-
-  <div class="flex gap-3 mt-5">
-    <button class="px-4 py-2 border border-green-500 text-green-600 rounded-md text-sm">INTERVIEW</button>
-    <button class="px-4 py-2 border border-red-500 text-red-600 rounded-md text-sm">REJECTED</button>
-  </div>
-</div>
-
-<!-- ===== JOB CARD 3 ===== -->
-<div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
-  <div class="flex justify-between items-start">
-    <div>
-      <h3 class="text-lg font-semibold text-blue-900">TechNova Ltd</h3>
-      <p class="text-sm text-gray-600">Frontend Developer</p>
+    <p class="meta">Remote • Node.js</p>
+    <span class="badge">NOT APPLIED</span>
+    <p class="desc">Build secure backend APIs.</p>
+    <div class="actions">
+      <button class="interview">INTERVIEW</button>
+      <button class="rejected">REJECTED</button>
     </div>
-    <button class="text-gray-400 hover:text-red-500">🗑</button>
   </div>
 
-  <p class="text-sm text-gray-500 mt-3">
-    Dhaka • Full-time • 60,000 – 90,000 BDT
-  </p>
-
-  <span class="inline-block mt-3 px-3 py-1 text-xs rounded-md bg-blue-50 text-blue-700">
-    NOT APPLIED
-  </span>
-
-  <p class="text-sm text-gray-600 mt-4">
-    Work with HTML, CSS, Tailwind and JavaScript to build responsive UI.
-  </p>
-
-  <div class="flex gap-3 mt-5">
-    <button class="px-4 py-2 border border-green-500 text-green-600 rounded-md text-sm">INTERVIEW</button>
-    <button class="px-4 py-2 border border-red-500 text-red-600 rounded-md text-sm">REJECTED</button>
-  </div>
-</div>
-
-<!-- ===== JOB CARD 4 ===== -->
-<div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
-  <div class="flex justify-between items-start">
-    <div>
-      <h3 class="text-lg font-semibold text-blue-900">CloudStack</h3>
-      <p class="text-sm text-gray-600">Backend Developer</p>
+  <div class="job-card" data-status="all">
+    <div class="top">
+      <div>
+        <h3>Pixel Studio</h3>
+        <p>UI/UX Designer</p>
+      </div>
+      <button class="delete">✕</button>
     </div>
-    <button class="text-gray-400 hover:text-red-500">🗑</button>
-  </div>
-
-  <p class="text-sm text-gray-500 mt-3">
-    Remote • Full-time • $95,000 – $140,000
-  </p>
-
-  <span class="inline-block mt-3 px-3 py-1 text-xs rounded-md bg-blue-50 text-blue-700">
-    NOT APPLIED
-  </span>
-
-  <p class="text-sm text-gray-600 mt-4">
-    Build secure and scalable backend services using Node.js and databases.
-  </p>
-
-  <div class="flex gap-3 mt-5">
-    <button class="px-4 py-2 border border-green-500 text-green-600 rounded-md text-sm">INTERVIEW</button>
-    <button class="px-4 py-2 border border-red-500 text-red-600 rounded-md text-sm">REJECTED</button>
-  </div>
-</div>
-
-<!-- ===== JOB CARD 5 ===== -->
-<div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
-  <div class="flex justify-between items-start">
-    <div>
-      <h3 class="text-lg font-semibold text-blue-900">Pixel Studio</h3>
-      <p class="text-sm text-gray-600">UI/UX Designer</p>
+    <p class="meta">Remote • Contract</p>
+    <span class="badge">NOT APPLIED</span>
+    <p class="desc">Design clean user interfaces.</p>
+    <div class="actions">
+      <button class="interview">INTERVIEW</button>
+      <button class="rejected">REJECTED</button>
     </div>
-    <button class="text-gray-400 hover:text-red-500">🗑</button>
   </div>
 
-  <p class="text-sm text-gray-500 mt-3">
-    Remote • Contract • $40/hour
-  </p>
-
-  <span class="inline-block mt-3 px-3 py-1 text-xs rounded-md bg-blue-50 text-blue-700">
-    NOT APPLIED
-  </span>
-
-  <p class="text-sm text-gray-600 mt-4">
-    Design clean and user-friendly interfaces for web and mobile platforms.
-  </p>
-
-  <div class="flex gap-3 mt-5">
-    <button class="px-4 py-2 border border-green-500 text-green-600 rounded-md text-sm">INTERVIEW</button>
-    <button class="px-4 py-2 border border-red-500 text-red-600 rounded-md text-sm">REJECTED</button>
-  </div>
-</div>
-
-<!-- ===== JOB CARD 6 ===== -->
-<div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
-  <div class="flex justify-between items-start">
-    <div>
-      <h3 class="text-lg font-semibold text-blue-900">DataLoop</h3>
-      <p class="text-sm text-gray-600">Junior Data Analyst</p>
+  <div class="job-card" data-status="all">
+    <div class="top">
+      <div>
+        <h3>DataLoop</h3>
+        <p>Data Analyst</p>
+      </div>
+      <button class="delete">✕</button>
     </div>
-    <button class="text-gray-400 hover:text-red-500">🗑</button>
-  </div>
-
-  <p class="text-sm text-gray-500 mt-3">
-    Hybrid • Full-time • 50,000 – 70,000 BDT
-  </p>
-
-  <span class="inline-block mt-3 px-3 py-1 text-xs rounded-md bg-blue-50 text-blue-700">
-    NOT APPLIED
-  </span>
-
-  <p class="text-sm text-gray-600 mt-4">
-    Analyze business data and create reports to support decision making.
-  </p>
-
-  <div class="flex gap-3 mt-5">
-    <button class="px-4 py-2 border border-green-500 text-green-600 rounded-md text-sm">INTERVIEW</button>
-    <button class="px-4 py-2 border border-red-500 text-red-600 rounded-md text-sm">REJECTED</button>
-  </div>
-</div>
-
-<!-- ===== JOB CARD 7 ===== -->
-<div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
-  <div class="flex justify-between items-start">
-    <div>
-      <h3 class="text-lg font-semibold text-blue-900">SecureIT</h3>
-      <p class="text-sm text-gray-600">Cybersecurity Intern</p>
+    <p class="meta">Hybrid • Full-time</p>
+    <span class="badge">NOT APPLIED</span>
+    <p class="desc">Analyze business data.</p>
+    <div class="actions">
+      <button class="interview">INTERVIEW</button>
+      <button class="rejected">REJECTED</button>
     </div>
-    <button class="text-gray-400 hover:text-red-500">🗑</button>
   </div>
 
-  <p class="text-sm text-gray-500 mt-3">
-    Onsite • Internship • Paid
-  </p>
-
-  <span class="inline-block mt-3 px-3 py-1 text-xs rounded-md bg-blue-50 text-blue-700">
-    NOT APPLIED
-  </span>
-
-  <p class="text-sm text-gray-600 mt-4">
-    Assist security team in monitoring systems and handling vulnerabilities.
-  </p>
-
-  <div class="flex gap-3 mt-5">
-    <button class="px-4 py-2 border border-green-500 text-green-600 rounded-md text-sm">INTERVIEW</button>
-    <button class="px-4 py-2 border border-red-500 text-red-600 rounded-md text-sm">REJECTED</button>
-  </div>
-</div>
-
-<!-- ===== JOB CARD 8 ===== -->
-<div class="bg-white rounded-xl p-6 shadow-sm">
-  <div class="flex justify-between items-start">
-    <div>
-      <h3 class="text-lg font-semibold text-blue-900">Startup Hub</h3>
-      <p class="text-sm text-gray-600">Junior Software Engineer</p>
+  <div class="job-card" data-status="all">
+    <div class="top">
+      <div>
+        <h3>SecureIT</h3>
+        <p>Cybersecurity Intern</p>
+      </div>
+      <button class="delete">✕</button>
     </div>
-    <button class="text-gray-400 hover:text-red-500">🗑</button>
+    <p class="meta">Onsite • Internship</p>
+    <span class="badge">NOT APPLIED</span>
+    <p class="desc">Assist security monitoring.</p>
+    <div class="actions">
+      <button class="interview">INTERVIEW</button>
+      <button class="rejected">REJECTED</button>
+    </div>
   </div>
 
-  <p class="text-sm text-gray-500 mt-3">
-    Dhaka • Full-time • 45,000 – 65,000 BDT
-  </p>
-
-  <span class="inline-block mt-3 px-3 py-1 text-xs rounded-md bg-blue-50 text-blue-700">
-    NOT APPLIED
-  </span>
-
-  <p class="text-sm text-gray-600 mt-4">
-    Learn and contribute to real-world software projects in a fast-paced team.
-  </p>
-
-  <div class="flex gap-3 mt-5">
-    <button class="px-4 py-2 border border-green-500 text-green-600 rounded-md text-sm">INTERVIEW</button>
-    <button class="px-4 py-2 border border-red-500 text-red-600 rounded-md text-sm">REJECTED</button>
+  <div class="job-card" data-status="all">
+    <div class="top">
+      <div>
+        <h3>Startup Hub</h3>
+        <p>Software Engineer</p>
+      </div>
+      <button class="delete">✕</button>
+    </div>
+    <p class="meta">Dhaka • Full-time</p>
+    <span class="badge">NOT APPLIED</span>
+    <p class="desc">Work on real-world projects.</p>
+    <div class="actions">
+      <button class="interview">INTERVIEW</button>
+      <button class="rejected">REJECTED</button>
+    </div>
   </div>
-</div>  
 
-    </section>
+</section>
+
+<script src="./script.js"></script>
 </body>
 </html>
