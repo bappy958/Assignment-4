@@ -5,20 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Job Application Tracker</title>
   <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
+ 
 <header>
   <h1>Job Application Tracker</h1>
 </header>
 
 <section class="dashboard">
-  <div><p>Total</p><h2 id="totalCount">8</h2></div>
-  <div><p>Interview</p><h2 id="interviewCount">0</h2></div>
-  <div><p>Rejected</p><h2 id="rejectedCount">0</h2></div>
+  <div><p>Total</p><h2 id="totalCount" class="total">8</h2></div>
+  <div><p>Interview</p><h2 id="interviewCount" class="interview">0</h2></div>
+  <div><p>Rejected</p><h2 id="rejectedCount" class="rejected">0</h2></div>
 </section>
 
 <section class="jobs">
@@ -42,7 +43,7 @@
         <h3>Mobile First Corp</h3>
         <p>React Native Developer</p>
       </div>
-      <button class="delete">✕</button>
+      <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
     </div>
     <p class="meta">Remote • Full-time • $130k–175k</p>
     <span class="badge">NOT APPLIED</span>
@@ -59,7 +60,7 @@
         <h3>WebFlow Agency</h3>
         <p>Frontend Developer</p>
       </div>
-      <button class="delete">✕</button>
+      <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
     </div>
     <p class="meta">USA • Part-time • $90k</p>
     <span class="badge">NOT APPLIED</span>
@@ -76,7 +77,7 @@
         <h3>TechNova</h3>
         <p>Junior Web Developer</p>
       </div>
-      <button class="delete">✕</button>
+      <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
     </div>
     <p class="meta">Dhaka • Full-time • 60k BDT</p>
     <span class="badge">NOT APPLIED</span>
@@ -93,7 +94,7 @@
         <h3>CloudStack</h3>
         <p>Backend Developer</p>
       </div>
-      <button class="delete">✕</button>
+      <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
     </div>
     <p class="meta">Uk • Part-time • $40k</p>
     <span class="badge">NOT APPLIED</span>
@@ -110,7 +111,7 @@
         <h3>Pixel Studio</h3>
         <p>UI/UX Designer</p>
       </div>
-      <button class="delete">✕</button>
+      <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
     </div>
     <p class="meta">usa • full-time • $99k</p>
     <span class="badge">NOT APPLIED</span>
@@ -127,7 +128,7 @@
         <h3>DataLoop</h3>
         <p>Data Analyst</p>
       </div>
-      <button class="delete">✕</button>
+      <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
     </div>
     <p class="meta">Hybrid • Full-time • $70k</p>
     <span class="badge">NOT APPLIED</span>
@@ -144,7 +145,7 @@
         <h3>SecureIT</h3>
         <p>Cybersecurity Intern</p>
       </div>
-      <button class="delete">✕</button>
+      <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
     </div>
     <p class="meta">Onsite • Internship • $20k</p>
     <span class="badge">NOT APPLIED</span>
@@ -161,7 +162,7 @@
         <h3>Startup Hub</h3>
         <p>Software Engineer</p>
       </div>
-      <button class="delete">✕</button>
+      <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
     </div>
     <p class="meta">Dhaka • Full-time • 60k BDT</p>
     <span class="badge">NOT APPLIED</span>

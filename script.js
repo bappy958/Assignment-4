@@ -3,7 +3,7 @@ const totalEl = document.getElementById("totalCount");
 const interviewEl = document.getElementById("interviewCount");
 const rejectedEl = document.getElementById("rejectedCount");
 const jobNumberEl = document.getElementById("jobNumber");
-
+// ===== FUNCTIONS =====
 function getCards() {
   return document.querySelectorAll(".job-card");
 }

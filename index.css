@@ -17,6 +17,9 @@ header {
   padding: 20px;
   color: #0f172a;
 }
+header h1 {
+  color: #0dae55;
+}
 
 /* DASHBOARD */
 .dashboard {
@@ -27,7 +30,9 @@ header {
   gap: 15px;
   padding: 20px;
 }
-
+.dashboard total {
+  color: #3b82f6;
+}
 .dashboard div {
   background: #ffffff;          /* card white */
   padding: 20px;
